@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Projects</title>
 
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         body {
             font-family: Arial, Helvetica, sans-serif;
+
             background: #f4f6f8;
+
             color: #222;
+
             min-height: 100vh;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
         }
 
+
         .container {
             width: 90%;
+
             max-width: 1100px;
+
             text-align: center;
+
             padding: 40px 20px;
         }
 
+
         /* Main Heading */
+
         h1 {
             font-size: 44px;
+
             margin-bottom: 15px;
+
             color: #222;
         }
 
+
         .subtitle {
             font-size: 18px;
+
             color: #666;
+
             margin-bottom: 45px;
         }
 
+
         /* Project Cards */
+
         .cards {
             display: flex;
+
             justify-content: center;
+
             align-items: stretch;
+
             gap: 25px;
+
             flex-wrap: wrap;
         }
 
+
         .card {
             background: white;
+
             width: 300px;
+
             min-height: 280px;
 
             padding: 35px 25px;
@@ -65,182 +96,275 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: space-between;
 
-            transition: transform 0.25s ease,
-                        box-shadow 0.25s ease;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
+
         /* Card Hover Effect */
+
         .card:hover {
             transform: translateY(-8px);
 
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
+
         /* Project Title */
+
         .card h2 {
             font-size: 25px;
+
             margin-bottom: 18px;
+
             color: #222;
         }
 
+
         /* Project Description */
+
         .card p {
             font-size: 16px;
+
             line-height: 1.6;
+
             color: #666;
+
             margin-bottom: 30px;
         }
 
+
         /* Button */
+
         .button {
             display: inline-block;
+
+            width: 100%;
 
             padding: 13px 25px;
 
             background: #24292f;
+
             color: white;
 
-            text-decoration: none;
+            border: none;
+
+            cursor: pointer;
 
             border-radius: 8px;
 
             font-size: 15px;
+
             font-weight: bold;
 
-            transition: background 0.2s ease,
-                        transform 0.2s ease;
+            font-family: Arial, Helvetica, sans-serif;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
         }
+
 
         .button:hover {
             background: #444;
+
             transform: scale(1.03);
         }
 
+
+        /* Coming Soon Button */
+
+        .button.disabled {
+            background: #999;
+
+            cursor: default;
+        }
+
+
+        .button.disabled:hover {
+            background: #999;
+
+            transform: none;
+        }
+
+
         /* Footer */
+
         footer {
             margin-top: 50px;
+
             font-size: 14px;
+
             color: #888;
         }
 
+
         /* Mobile Responsive */
+
         @media (max-width: 700px) {
 
             h1 {
                 font-size: 36px;
             }
 
+
             .subtitle {
                 font-size: 16px;
             }
 
+
             .cards {
                 flex-direction: column;
+
                 align-items: center;
             }
 
+
             .card {
                 width: 100%;
+
                 max-width: 350px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
-<div class="container">
 
-    <!-- Main Heading -->
-    <h1>My Projects</h1>
 
-    <p class="subtitle">
-        Explore my projects and applications below.
-    </p>
+    <div class="container">
 
-    <!-- Project Cards -->
-    <div class="cards">
 
-        <!-- ================= PROJECT 1 ================= -->
+        <!-- Main Heading -->
 
-        <div class="card">
+        <h1>My Projects</h1>
 
-            <div>
-                <h2>One Health</h2>
 
-                <p>
-                    Swayam CCC - One Health
-                </p>
+        <p class="subtitle">
+            Explore my projects and applications below.
+        </p>
+
+
+
+        <!-- Project Cards -->
+
+        <div class="cards">
+
+
+
+            <!-- ================= PROJECT 1 ================= -->
+
+            <div class="card">
+
+                <div>
+
+                    <h2>One Health</h2>
+
+                    <p>
+                        Swayam CCC - One Health
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="button"
+                    onclick="window.open(
+                        'https://gjjaswanth.github.io/OneHealth/',
+                        '_blank'
+                    )">
+
+                    Open Project
+
+                </button>
+
             </div>
 
-            <a
-                href="https://gjjaswanth.github.io/OneHealth/"
-                class="button"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Open Project
-
-            </a>
-
-        </div>
 
 
-        <!-- ================= PROJECT 2 ================= -->
+            <!-- ================= PROJECT 2 ================= -->
 
-        <div class="card">
+            <div class="card">
 
-            <div>
-                <h2>Biodiversity for Sustainability</h2>
+                <div>
 
-                <p>
+                    <h2>Biodiversity for Sustainability</h2>
+
+                    <p>
+                        Coming Soon
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="button disabled"
+                    disabled>
+
                     Coming Soon
-                </p>
+
+                </button>
+
             </div>
 
-            <a
-                href="#"
-                class="button">
 
-                Coming Soon
 
-            </a>
+            <!-- ================= PROJECT 3 ================= -->
+
+            <div class="card">
+
+                <div>
+
+                    <h2>Energy - UWE</h2>
+
+                    <p>
+                        Energy Resources
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="button"
+                    onclick="window.open(
+                        'https://gjjaswanth.github.io/EnergyResources/',
+                        '_blank'
+                    )">
+
+                    Open Project
+
+                </button>
+
+            </div>
+
 
         </div>
 
 
-        <!-- ================= PROJECT 3 ================= -->
 
-        <div class="card">
+        <!-- Footer -->
 
-            <div>
-                <h2>Energy - UWE</h2>
+        <footer>
 
-                <p>
-                    Energy Resources
-                </p>
-            </div>
+            © 2026 My Projects
 
-            <a
-                href="https://gjjaswanth.github.io/EnergyResources/"
-                class="button"
-                target="_blank"
-                rel="noopener noreferrer">
+        </footer>
 
-                Open Project
-
-            </a>
-
-        </div>
 
     </div>
 
 
-    <!-- Footer -->
-    <footer>
-        © 2026 My Projects
-    </footer>
+</body>
 
-</div>
+</html>
